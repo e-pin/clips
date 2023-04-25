@@ -15,7 +15,10 @@ export class RegisterComponent {
     Validators.required,
     Validators.email
   ])
-  age = new FormControl('')
+  age = new FormControl('', [
+    Validators.required,
+    Validators.min(18)
+  ])
   password = new FormControl('')
   confirmPassword = new FormControl('')
   phoneNumber = new FormControl('')
